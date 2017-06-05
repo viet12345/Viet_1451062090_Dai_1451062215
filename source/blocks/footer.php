@@ -9,273 +9,34 @@
 </div>
 <div class="thongtin-content">
 
-
+<?php
+$theloai = DsTheLoai();
+while ($row_theloai = mysql_fetch_array($theloai)) {
+	$idTL = $row_theloai['idTL'];
+?>
 	<ul class="ulBlockMenu">
                 <li class="liFirst">
                    <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
+                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/"><?php echo $row_theloai['TenTL'] ?></a>
                    </h2>
                 </li>
+                <?php
+				$loaitin = DsLoaiTin_Theo_TheLoai($idTL);
+				while ($row_loaitin = mysql_fetch_array($loaitin)){
+				?>
                 <li class="liFollow">
                    <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
+                      <a href="./index.php?p=tintrongloai&idLT=<?php echo $row_loaitin['idLT']?>"><?php echo $row_loaitin['Ten']?></a>
                    </h2>
                 </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
+                <?php
+				}
+				?>
              </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             <ul class="ulBlockMenu">
-                <li class="liFirst">
-                   <h2>
-                      <a class="mnu_giaoduc" href="/tin-tuc/giao-duc/">Giáo dục</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2>
-                      <a href="/tin-tuc/the-gioi/">Thế giới</a>
-                   </h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/tu-lieu/">Tư liệu</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/phan-tich/">Phân tích</a></h2>
-                </li>
-                <li class="liFollow">
-                   <h2><a href="/tin-tuc/the-gioi/nguoi-viet-5-chau/">Người Việt 5 châu</a></h2>
-                </li>
-             </ul>
-             
-             
-
+<?php
+}
+?>             
+ 
 </div>
 
 
